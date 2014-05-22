@@ -4,9 +4,9 @@ Daniel Standage, daniel.standage@gmail.com
 
 The [Maker annotation pipeline](http://www.yandell-lab.org/software/maker.html) uses long, verbose IDs for the genomic features it annotates.
 No doubt there is a purpose, at least within the Maker framework, for formatting the IDs the way they do.
-However, when it comes to distribution these ID are pretty unappealing.
+However, when it comes to distribution these IDs are pretty unappealing.
 
-This is a small collection of scripts for replacing IDs for gene and RNA features in a GFF3 file.
+This repository contains a small collection of scripts for replacing IDs of gene and RNA features in a GFF3 file.
 These scripts were designed for use with any GFF3-formatted annotations, but they have only be tested on Maker-produced GFF3.
 
 Here is a sample invocation of the scripts.
