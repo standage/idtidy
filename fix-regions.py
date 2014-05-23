@@ -1,19 +1,6 @@
 #!/usr/bin/env python
 import re, sys
-
-def parse_fasta(fp):
-  """
-  Stolen shamelessly from http://stackoverflow.com/a/7655072/459780.
-  """
-  name, seq = None, []
-  for line in fp:
-    line = line.rstrip()
-    if line.startswith(">"):
-      if name: yield (name, ''.join(seq))
-      name, seq = line, []
-    else:
-      seq.append(line)
-  if name: yield (name, ''.join(seq))
+from idtidy import parse_fasta
 
 if __name__ == "__main__":
   usage = ("\nFix '##sequence-region' pragmas in the given GFF3 file.\n"

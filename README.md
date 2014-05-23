@@ -1,18 +1,10 @@
-# Maker ID Mint
+# ID Tidy
 
 Daniel Standage, daniel.standage@gmail.com
 
-The [Maker annotation pipeline](http://www.yandell-lab.org/software/maker.html) uses long, verbose IDs for the genomic features it annotates.
-No doubt there is a purpose, at least within the Maker framework, for formatting the IDs the way they do.
-However, when it comes to distribution these IDs are pretty unappealing.
-
-This repository contains a small collection of scripts for replacing IDs of gene and RNA features in a GFF3 file.
-These scripts were designed for use with any GFF3-formatted annotations, but they have only be tested on Maker-produced GFF3.
-
-Here is a sample invocation of the scripts.
+The ``idtidy`` python module was written to facilitate minting clean, concise, and consistent IDs for sequences and annotations within the *Polistes dominula* genome project.
 
 ```bash
-# The line containing 'gt gff3' can be removed if GenomeTools is not available on your system.
 egrep -v '(expressed_sequence|protein|translated_nucleotide)_match' maker.gff3 | \
     gt gff3 -retainids -sort -tidy 2> gt.log | \
     python annot-ids.py --idfmt='Pdom%s-%05lu' -n --rnamap=rnaids.txt --dbxref=MAKER - | \
