@@ -2,7 +2,7 @@
 
 Daniel Standage, daniel.standage@gmail.com
 
-The ``idtidy`` python module was written to facilitate minting clean, concise, and consistent IDs for sequences and annotations within the *Polistes dominula* genome project.
+The ``idtidy`` python module and associated scripts were written to facilitate minting clean, concise, and consistent IDs for sequences and annotations within the *Polistes dominula* genome project.
 
 ```bash
 egrep -v '(expressed_sequence|protein|translated_nucleotide)_match' maker.gff3 | \
